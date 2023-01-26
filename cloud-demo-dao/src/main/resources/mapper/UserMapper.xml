@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.upuphone.cloudplatform.demo.dao.mapper.UserMapper">
+
+    <select id="findUser"
+            parameterType="com.upuphone.cloudplatform.demo.dao.po.UserQueryPO"
+            resultType="com.upuphone.cloudplatform.demo.dao.entity.User">
+        select id,user_name,nick_name,create_time,update_time,is_deleted from t_user where nick_name = #{nickName}
+    </select>
+
+</mapper>
